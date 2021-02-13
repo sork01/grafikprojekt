@@ -1,0 +1,49 @@
+===================================================
+gui and i/o
+===================================================
+class main
+    main:
+        read command line
+        create window
+        event loop
+
+class filedialog
+    open dialog
+
+class filedialog/gtkfiledialog
+
+class gui
+    create window
+    set pixel
+    events
+
+class gui/sdlgui
+
+
+===================================================
+world and simulation
+===================================================
+
+class camera
+
+class object
+    .material
+    getwireframe()
+    intersection(origin, vector)
+
+class object/trianglemesh
+    getwireframe()
+        return [triangles.vertices, linear wire function (constant?)]
+
+class object/sphere
+    getwireframe()
+        return [[four points, four points], sphere wire function]
+
+class scene
+    .objects
+    .cameras
+
+class renderer
+
+class renderer/wireframerenderer
+class renderer/raytracer

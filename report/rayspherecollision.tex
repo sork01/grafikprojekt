@@ -1,0 +1,110 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[margin=3cm]{geometry}
+\linespread{1.25}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{lmodern}
+
+\begin{document}
+
+\section*{Ray-Sphere collision}
+
+Each point $(x,y,z)$ on the surface of a sphere of radius $R$ centered at the origin can be
+written as:
+\begin{equation}
+x^2+y^2+z^2 = R^2
+\end{equation}
+
+\noindent
+We can also write an equivalent expression using vector notation where $\vec{P} = (x,y,z)$:
+\begin{equation}
+|\vec{P}| = R \Rightarrow |\vec{P}|^2 = R^2
+\end{equation}
+
+\noindent
+With the sphere instead being centered at some arbitrary point $C = (C_x, C_y, C_z)$, each point on its surface can
+be written as:
+\begin{equation}
+(x-C_x)^2 + (y-C_y)^2 + (z-C_z)^2 = R^2
+\end{equation}
+
+\noindent
+We can again write an equivalent expression using vector notation:
+\begin{equation}
+|\vec{P} - \vec{C}| = R \Rightarrow |\vec{P} - \vec{C}|^2 = R^2
+\end{equation}
+
+\noindent
+Each point on a ray, sent from a point $\vec{O} = (O_x, O_y, O_z)$ on the camera film, in a direction
+$\vec{D} = (D_x, D_y, D_z)$, can be written as follows:
+\begin{equation}
+\vec{O} + t \vec{D}, \quad t \in \mathbb{R}
+\end{equation}
+
+\noindent
+Substituting expression 5 for $P$ in equation 4 gives us:
+\begin{equation}
+|(\vec{O} + t \vec{D}) - \vec{C}|^2 = R^2
+\end{equation}
+
+\noindent
+Expanding the vector $(\vec{O} + t \vec{D}) - \vec{C}$:
+\begin{equation}
+|(O_x + t D_x - C_x, O_y + t D_y - C_y, O_z + t D_z - C_z)|^2 = R^2
+\end{equation}
+
+\noindent
+By the definition of Euclidean vector magnitude:
+\begin{equation}
+\sqrt{(O_x + t D_x - C_x)^2 + (O_y + t D_y - C_y)^2 + (O_z + t D_z - C_z)^2}^2 = R^2
+\end{equation}
+
+\noindent
+Squaring the square root:
+\begin{equation}
+(O_x + t D_x - C_x)^2 + (O_y + t D_y - C_y)^2 + (O_z + t D_z - C_z)^2 = R^2
+\end{equation}
+
+\noindent
+Computing the powers on the left side:
+\begin{equation}
+\begin{align}
+  & O_x^2 + 2 O_x t D_x + D_x^2 - 2 O_x C_x - 2 D_x C_x + C_x^2\\
++ & O_y^2 + 2 O_y t D_y + D_y^2 - 2 O_y C_y - 2 D_y C_y + C_y^2\\
++ & O_z^2 + 2 O_z t D_z + D_z^2 - 2 O_z C_z - 2 D_z C_z + C_z^2 = R^2\\
+\end{align}
+\end{equation}
+
+\noindent
+Subtracting $R^2$ from both sides:
+\begin{equation}
+\begin{align}
+  & O_x^2 + 2 O_x t D_x + t^2 D_x^2 - 2 O_x C_x - 2 t D_x C_x + C_x^2\\
++ & O_y^2 + 2 O_y t D_y + t^2 D_y^2 - 2 O_y C_y - 2 t D_y C_y + C_y^2\\
++ & O_z^2 + 2 O_z t D_z + t^2 D_z^2 - 2 O_z C_z - 2 t D_z C_z + C_z^2 - R^2 = 0\\
+\end{align}
+\end{equation}
+
+\noindent
+Factoring:
+\begin{equation}
+\begin{align}
+  & t^2(D_x^2 + D_y^2 + D_z^2)\\
++ & t(2 O_x D_x + 2 O_y D_y + 2 O_z D_z - 2 D_x C_x - 2 D_y C_y - 2 D_z C_z)\\
++ & O_x^2 + O_y^2 + O_z^2 + C_x^2 + C_y^2 + C_z^2 - 2 O_x C_x - 2 O_y C_y - 2 O_z C_z - R^2 = 0\\
+\end{align}
+\end{equation}
+
+\noindent
+And so we have a quadratic equation $at^2 + bt + c = 0$ with
+\begin{align}
+a = & D_x^2 + D_y^2 + D_z^2\\
+b = & 2(O_x D_x + O_y D_y + O_z D_z - D_x C_x - D_y C_y - D_z C_z)\\
+c = & O_x^2 + O_y^2 + O_z^2 + C_x^2 + C_y^2 + C_z^2 - 2(O_x C_x + O_y C_y + O_z C_z) - R^2
+\end{align}
+
+\end{document}

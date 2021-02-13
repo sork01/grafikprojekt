@@ -1,0 +1,70 @@
+
+// *neode.onsave* setgo gcc -fsyntax-only usbscancodes.hpp
+
+class USBScanCodes
+{
+public:
+    static const int A = 4;
+    static const int B = 5;
+    static const int C = 6;
+    static const int D = 7;
+    static const int E = 8;
+    static const int F = 9;
+    static const int G = 10;
+    static const int H = 11;
+    static const int I = 12;
+    static const int J = 13;
+    static const int K = 14;
+    static const int L = 15;
+    static const int M = 16;
+    static const int N = 17;
+    static const int O = 18;
+    static const int P = 19;
+    static const int Q = 20;
+    static const int R = 21;
+    static const int S = 22;
+    static const int T = 23;
+    static const int U = 24;
+    static const int V = 25;
+    static const int W = 26;
+    static const int X = 27;
+    static const int Y = 28;
+    static const int Z = 29;
+    static const int Digit1 = 30;
+    static const int Digit2 = 31;
+    static const int Digit3 = 32;
+    static const int Digit4 = 33;
+    static const int Digit5 = 34;
+    static const int Digit6 = 35;
+    static const int Digit7 = 36;
+    static const int Digit8 = 37;
+    static const int Digit9 = 38;
+    static const int Digit0 = 39;
+    static const int Enter = 40;
+    static const int Escape = 41;
+    static const int Backspace = 42;
+    static const int Tab = 43;
+    static const int Space = 44;
+    static const int F1 = 58;
+    static const int F2 = 59;
+    static const int F3 = 60;
+    static const int F4 = 61;
+    static const int F5 = 62;
+    static const int F6 = 63;
+    static const int F7 = 64;
+    static const int F8 = 65;
+    static const int F9 = 66;
+    static const int F10 = 67;
+    static const int F11 = 68;
+    static const int F12 = 69;
+    static const int RightArrow = 79;
+    static const int LeftArrow = 80;
+    static const int DownArrow = 81;
+    static const int UpArrow = 82;
+    static const int LeftCtrl = 224;
+    static const int LeftShift = 225;
+    static const int LeftAlt = 226;
+    static const int RightCtrl = 228;
+    static const int RightShift = 229;
+    static const int RightAlt = 230;
+};

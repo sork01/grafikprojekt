@@ -1,0 +1,10 @@
+Refraction
+
+Refraction was implemented by introducing a new property for material called refraction.
+Standard refraction is used if no refraction has been set for the material and the standard 
+refraction is set to 1 which is the refractive index for vacuum. 
+Using Snell's law we cast a new refracted ray in the refracted direction comming out of the transparent material.
+
+The refraction is represented as a float containing the refractive index of said material.
+Since refraction isn't something we see and think about every day it's kind of hard to evaluate if
+the refraction is realistic or not. However i think it looks realistic for glass at the time being.

@@ -1,0 +1,27 @@
+base features
+    multithreading [fairly easy]
+    
+    loading of models in wavefront .obj format [done, more or less]
+    
+    fast wireframe view for positioning before rendering [use lab 3]
+    
+    non-triangle based primitives
+        spheres [easy to raytrace, trickier to wireframe?]
+    
+    surface materials
+        phong shading [fairly easy? interpolate vertex normals over triangles AND the phong reflection model]
+        texturing [easy]
+        opacity [fairly easy? return my color * my opacity + ray pass through hit object behind * (1.0 - my opacity)]
+        specular (reflective) [fairly easy]
+        refraction [fairly easy]
+    
+    area lights / soft shadows [moderate]
+
+bonus features
+    antialiasing [fairly easy]
+    
+    fast flat shaded view for positioning before rendering [use lab 3]
+    
+    normal maps [easy]
+    
+    more non-triangle based primitives?

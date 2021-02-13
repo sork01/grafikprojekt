@@ -1,0 +1,22 @@
+Loading of models in the .STL format
+
+Only the binary version of the .STL format will be available since the plain text
+version is not commonly used.
+
+
+
+Loading .STL files
+
+STL file format is a very popular format for the 3d-printing community since it's using triangles 
+only, which makes it easy to translate into code for the 3d-printer to print.
+STL files can be either in plain text or in binary. We decided only to implement the 
+binary version of the STL format since the plain text version is an older version which
+takes up more space and is rarely used. 
+Luckily there was pretty detailed information on how the binary STL files are represented 
+on wikipedia.
+
+The first 80 bytes contains the header for the model (modelname or author).
+The next 32 bits contains the number of total triangles in the model.
+For every triangle there are 3*4 bytes containing the normal vectors of the triangle, 
+3*(3*4 bytes information about the position of the vertex) and lastly there is 2 bytes of
+attribute byte count which is 0 in the standard format.

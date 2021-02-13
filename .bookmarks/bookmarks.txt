@@ -1,0 +1,12 @@
+http://en.cppreference.com/w/cpp/language|CPP Reference
+http://glm.g-truc.net/0.9.8/api/modules.html|GLM API
+http://paulbourke.net/dataformats/mtl/|Spec: MTL
+http://raytracerlab.blogspot.se/p/project-specification.html|DGI15 ray tracer project
+https://en.wikibooks.org/wiki/GLSL_Programming/Vector_and_Matrix_Operations|GLM Matrix and Vector Operations
+https://en.wikipedia.org/wiki/Phong_reflection_model|Math: Phong Reflection Model
+https://en.wikipedia.org/wiki/Snell%27s_law|Math: Snells Law
+https://en.wikipedia.org/wiki/STL_(file_format)|Spec: STL
+https://wiki.libsdl.org/APIByCategory|SDL2 API By Category
+https://wiki.libsdl.org/CategoryAPI|SDL2 API By Name
+https://wiki.libsdl.org/MigrationGuide|SDL2 Migration Guide
+http://www.martinreddy.net/gfx/3d/OBJ.spec|Spec: OBJ
